@@ -23,7 +23,7 @@ pipeline {
         
         stage('terraform init') {
            steps {
-               dir('jenkins-terraform-pipeline/ec2_pipeline/')
+               
                
                  sh ('terraform init ')
            }
@@ -34,7 +34,7 @@ pipeline {
         
          stage('terraform fmt') {
            steps {
-                  dir('jenkins-terraform-pipeline/ec2_pipeline/')
+                 
                  sh ('terraform fmt ')
            }
         }
@@ -42,7 +42,7 @@ pipeline {
         
         stage('terraform plan') {
            steps {
-                  dir('jenkins-terraform-pipeline/ec2_pipeline/')
+                 
                  sh ('terraform plan ')
            }
         }
@@ -51,7 +51,7 @@ pipeline {
         
         stage('terraform apply -auto-approve') {
            steps {
-                  dir('jenkins-terraform-pipeline/ec2_pipeline/')
+                  
                  sh ('terraform apply -auto-approve')
            }
         }
